@@ -1,0 +1,52 @@
+
+<br><br>
+<br><br>
+<div class="container">
+    
+    <article class="uk-comment uk-comment-primary" >
+        <header class="uk-comment-header">
+            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <img class="uk-comment-avatar" [src]="dataProfile.image" width="200" height="200" alt="">
+                </div>
+                <div class="uk-width-expand">
+                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="/profil">{{dataProfile.email}}</a></h4>
+                   <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+                </div>
+            </div>
+        </header>
+        <div class="uk-comment-body">
+          <h3>First Name :</h3>
+            <p>{{dataProfile.lName}}</p>
+            <h3>Last Name :</h3>
+            <p>{{dataProfile.fName}}</p>
+
+        </div>
+    </article>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <input type="email" class="form-control" name="email" [(ngModel)]="dataProfile.email">
+
+            <input type="text" class="form-control" name="flName" [(ngModel)]="dataProfile.lName">
+            <input type="text" class="form-control" name="bio" [(ngModel)]="dataProfile.fName">
+            <input type="text" class="form-control" name="image" [(ngModel)]="dataProfile.image">
+
+            <div class="alert alert-success" *ngIf="successUpdate">{{successUpdate}}</div>
+            <button class="btn btn-success" >Update now!</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>

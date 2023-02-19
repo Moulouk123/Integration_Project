@@ -1,0 +1,82 @@
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Course Details</h2>
+        <p>Welcome to our Emploi Details </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+  
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+      <div class="container" data-aos="fade-up">
+  
+        <div class="row">
+          <div class="col-lg-8">
+            <img [src]="dataProduct.image" class="img-fluid" alt="">
+            <h3>{{dataProduct.poste}}</h3>
+            
+
+
+            <h4>Mission :</h4>
+  
+            <p>
+              {{dataProduct.mission}} </p>
+              
+          </div>
+          
+          <div class="col-lg-4">
+            
+  
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Company Name</h5>
+              <p><a href="#">{{dataProduct.company}}</a></p>
+            </div>
+            
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Company Email</h5>
+              <p><a href="#">{{dataProduct.email}}</a></p>
+            </div>
+            <div class="course-info d-flex justify-content-between align-items-center">
+                <h5>Company Telephone</h5>
+                <p><a href="#">{{dataProduct.tel}}</a></p>
+              </div>
+              <div class="course-info d-flex justify-content-between align-items-center">
+                <h5>Company horaire</h5>
+                <p><a href="#">{{dataProduct.horaire}}</a></p>
+              </div>
+            
+  
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>Money Fee</h5>
+              <p>{{dataProduct.prix}} DNT</p>
+            </div>
+            <div class="course-info d-flex justify-content-between align-items-center">
+                <h5>Poste Profil</h5>
+                <p><a href="#">{{dataProduct.profil}}</a></p>
+              </div>
+  
+        
+  
+            
+  
+          </div>
+          <div class="container-contact1-form-btn"  >
+            <button class="contact1-form-btn" *ngIf="etat" (click)="tester()">
+                <span >
+                    Tester vos competence
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </span>
+            </button>
+        </div>
+        </div>
+  
+      </div>
+    </section><!-- End Cource Details Section -->
+  
+   
+  
+  </main><!-- End #main -->
+  
+  

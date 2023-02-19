@@ -1,0 +1,100 @@
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a routerLink="/home">E_L</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+         <!-- <li><a routerLink="/profil" *ngIf="isUser">Profil</a></li>-->
+         <li><a routerLink="/profil" *ngIf="isUser">Profil</a></li>
+
+          <li><a routerLink="/myproducts" *ngIf="isUser">Courses</a></li>
+          <li><a routerLink="/trainers" *ngIf="isAdmin || isEtud">Trainers</a></li>
+          <li><a routerLink="/emploi" *ngIf="isUser">Events</a></li>
+         <li><a routerLink="/tests" *ngIf="isEtud">Test</a></li>
+          <li><a routerLink="/listuser" *ngIf="isAdmin">list Users</a></li>
+          <li><a routerLink="/listcontact" *ngIf="isAdmin">list Contact</a></li>
+
+            
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/register" *ngIf="!isUser">register</a></li>
+          <li><a routerLink="/login" *ngIf="!isUser">Login</a></li>
+          <li><a (click)="logout()" *ngIf="isUser">Logout</a></li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a routerLink="/home" class="get-started-btn">Get Started</a>
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+<router-outlet></router-outlet>
+   
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>E-L</h3>
+            <p>
+              ISET Nabeul<br>
+              -el mrezga<br>
+              Nabeul<br><br>
+              <strong>Phone:</strong> +216 20 553 239<br>
+              <strong>Email:</strong> E-L@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Projet d'integration</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+         </div>
+      </div>
+      
+    </div>
+  </footer>
+

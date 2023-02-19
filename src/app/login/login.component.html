@@ -1,0 +1,66 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Login</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="wrap">
+                    <div class="img" style="background-image: url(assets/img/img-01.png);"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4">Sign In</h3>
+                            </div>
+                            
+                        </div>
+                        <form #f="ngForm" class="signin-form">
+                            <div class="form-group mt-3">
+                                <input type="email" name="email" class="form-control" #email="ngModel" ngModel required>
+                                <label class="form-control-placeholder" for="username">Email</label>
+                            </div>
+                            <p class="alert alert-danger" *ngIf="email.errors && email.touched">this input email is
+                                required</p>
+
+                            <div class="form-group">
+                                <input id="password-field" name="password" type="password" minlength="9"
+                                    #password="ngModel" ngModel class="form-control" required>
+                                <label class="form-control-placeholder" for="password">Password</label>
+                                <span toggle="#password-field"
+                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <p class="alert alert-danger" *ngIf="password.errors && password.touched">this input
+                                password is required</p>
+
+                            <div class="form-group">
+                                <button type="submit" (click)="sa.signIn(email.value, password.value)"
+                                    class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                
+                                <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup">
+        <button type="button"  (click)="sa.GoogleAuth()">
+          Log in with Google 
+        </button>
+        <div></div>
+      </div>
+      <div class="formGroup">
+        <button type="button" (click)="sa.FacebookAuth()">
+          Log in with Facebook
+        </button>
+      </div>
+                                <div class="w-50 text-md-right">
+                                    <button type="button"  routerLink="/forgetpassword">Forgot Password</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center">Not a member? <a data-toggle="tab" routerLink="/register">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

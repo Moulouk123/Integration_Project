@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif
+}
+
+p {
+    margin: 0%
+}
+
+body {
+    height: 100vh;
+    background-color: bisque;
+    padding: 10px
+}
+
+.container {
+    margin: 30px auto;
+    background: white;
+    padding: 20px 15px
+}
+
+label.box {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd
+}
+label.box3 {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd
+}
+
+#one:checked~label.first,
+#two:checked~label.second,
+#three:checked~label.third,
+#four:checked~label.forth,
+#five:checked~label.fifth,
+#six:checked~label.sixth,
+#seven:checked~label.seveth,
+#eight:checked~label.eighth,
+#nine:checked~label.nineh,
+#ninerr:checked~label.ninerrh,
+#tenr:checked~label.tenrh,
+#ten:checked~label.tenh,
+#eleven:checked~label.elevenh,
+#twelve:checked~label.twelveh,
+#thirteen:checked~label.thirteenh,
+#fourteen:checked~label.fourteenh,
+#fifty:checked~label.fiftyh,
+#sixteen:checked~label.sixteenh,
+#seventeen:checked~label.seventeenh,
+#eighteen:checked~label.eighteenh,
+#nineteen:checked~label.nineteenh,
+#twenty:checked~label.twentyh,
+#twentyone:checked~label.twentyoneh ,
+#twentytwo:checked~label.twentytwoh,
+#twentytwothree:checked~label.twentytwothreeh {
+    border-color: #8e498e
+}
+
+#one:checked~label.first .circle,
+#two:checked~label.second .circle,
+#three:checked~label.third .circle,
+#four:checked~label.forth .circle,
+#five:checked~label.fifth .circle,
+#six:checked~label.sixth .circle,
+#seven:checked~label.seveth .circle,
+#eight:checked~label.eighth .circle
+#nine:checked~label.nineh .circle,
+#ninerr:checked~label.ninerrh .circle,
+#ten:checked~label.tenh .circle,
+#tenr:checked~label.tenrh .circle,
+
+#eleven:checked~label.elevenh .circle,
+#twelve:checked~label.twelveh .circle,
+#thirteen:checked~label.thirteenh .circle,
+#fourteen:checked~label.fourteenh .circle,
+#fifty:checked~label.fiftyh .circle,
+#sixteen:checked~label.sixteenh .circle,
+#seventeen:checked~label.seventeenh .circle,
+#eighteen:checked~label.eighteenh .circle,
+#nineteen:checked~label.nineteenh .circle,
+#twenty:checked~label.twentyh .circle,
+#twentyone:checked~label.twentyoneh .circle,
+#twentytwo:checked~label.twentytwoh .circle,
+#twentytwothree:checked~label.twentytwothreeh .circle
+{
+    border: 6px solid #8e498e;
+    background-color: #fff
+}
+
+label.box:hover {
+    background: #d5bbf7
+}
+
+label.box .course {
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+label.box .circle {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+    display: inline-block
+}
+
+input[type="radio"] {
+    display: none
+}
+
+.btn.btn-primary {
+    border-radius: 25px;
+    margin-top: 20px
+}
+
+@media(max-width: 450px) {
+    .subject {
+        font-size: 12px
+    }
+}

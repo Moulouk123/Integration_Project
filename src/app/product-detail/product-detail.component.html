@@ -1,0 +1,128 @@
+<!--<div class="container">
+
+    <div class="card">
+        <div class="card-body">
+            <img [src]="dataProduct.image" style="width: 100%; height: 500px;" alt="" srcset="">
+          <h1 class="card-title">{{dataProduct.title}}</h1>
+          <p class="card-title">{{dataProduct.nom}}</p>
+          <p class="card-title">{{dataProduct.email}}</p>
+          <h1 class="card-title">{{dataProduct.prix}}</h1>
+          <p class="card-text">{{dataProduct.description}}</p>
+
+
+    
+        </div>
+      </div>
+      
+
+
+</div>
+-->
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs" data-aos="fade-in">
+    <div class="container">
+      <h2>Course Details</h2>
+      <p>Welcome to our Course </p>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Cource Details Section ======= -->
+  <section id="course-details" class="course-details">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-lg-8">
+          <img [src]="dataProduct.image" class="img-fluid" alt="">
+          <h3>{{dataProduct.title}}</h3>
+          <h4>Description :</h4>
+
+          <p>
+            {{dataProduct.description}} </p>
+        </div>
+        
+        <div class="col-lg-4">
+
+          <div class="course-info d-flex justify-content-between align-items-center">
+            <h5>Trainer Name</h5>
+            <p><a href="#">{{dataProduct.nom}}</a></p>
+          </div>
+          
+          <div class="course-info d-flex justify-content-between align-items-center">
+            <h5>Trainer Email</h5>
+            <p><a href="#">{{dataProduct.email}}</a></p>
+          </div>
+
+          <div class="course-info d-flex justify-content-between align-items-center">
+            <h5>Course Fee</h5>
+            <p>{{dataProduct.prix}} DNT</p>
+          </div>
+
+      
+
+          
+
+        </div>
+
+      </div>
+      <button class="btn btn-primary" type="button" style="float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="etat"  >Add Video</button>
+      <button class="btn btn-primary" type="button" style="float: right;" (click)="gocheck()" *ngIf="etate">Inscrire</button>
+
+    </div>
+   <br><br><br>
+
+
+    <h3> Playlist</h3>
+    
+     <div *ngFor="let item of viddata" data-aos="fade-up">
+      <h4>{{item.title}}</h4>
+      <iframe src="https://www.youtube.com/embed/teL-R6yimDY"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen=""
+      width="560"
+      height="315"
+      frameborder="0"></iframe>
+   
+</div>
+ 
+  </section><!-- End Cource Details Section -->
+ 
+  
+  
+  
+ 
+
+</main><!-- End #main -->
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="addvideo(f)">
+          <div class="row">
+            <div>
+              <input type="text" class="form-control" placeholder="Title" name="title" #title="ngModel" ngModel>
+            </div>
+            <div>
+              <input type="text" class="form-control" placeholder="Link Video"  urlvideo="urlvideo" #urlvideo="ngModel" ngModel>
+            </div>
+          
+            
+          </div>
+          <div class="alert alert-success" *ngIf="successMessage">{{successMessage}}</div>
+          <br>
+          <button class="btn btn-success">Add Video</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

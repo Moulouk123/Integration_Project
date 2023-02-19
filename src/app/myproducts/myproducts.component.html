@@ -1,0 +1,128 @@
+<br><br>
+<!--<h4 style="text-align: center;">My products</h4>
+ <div class="container">
+    <div class="body">
+      <button class="btn btn-primary" type="button" style="float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal">Add products</button>
+      <br>
+      <br>
+        <div class="row">
+           <div class="col" *ngFor="let item of dataArray">
+           
+           
+                <div class="card" style="width: 18rem;" *ngIf="Uid===item.uid">
+                    <img [src]="item.image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.title}}</h5>
+                      <p class="card-text">{{item.name}}</p>
+                      <p class="card-text">{{item.email}}</p>
+                      <p class="card-text">{{item.prix}}</p>
+                    
+                      <button class="btn btn-danger" (click)="delete(item.id)">Delete</button>
+                      <button class="btn btn-info" (click)="Update()">Update</button>
+                    </div>
+                </div>              
+          
+               
+            </div>
+            
+        </div>
+    </div>
+   
+ </div>
+-->
+<main id="main" data-aos="fade-in">
+<div class="breadcrumbs">
+  <div class="container">
+    <h2>Courses</h2>
+    <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+  </div>
+</div><!-- End Breadcrumbs -->
+<button class="btn btn-primary" type="button" style="float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="etat">Add products</button>
+
+<!-- ======= Courses Section ======= -->
+<section id="courses" class="courses">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" *ngFor="let item of dataArray">
+        <div class="course-item" height="90%" width="50%" >
+          <img [src]="item.imag" class="img-fluid" alt="30" height="30%" width="50%">
+          <div class="course-content">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4>{{item.title}}</h4>
+              <p class="price">{{item.prix}}</p>
+            </div>
+
+            <h3>{{item.email}}</h3>
+            <p>{{item.description}}</p>
+            <div class="trainer d-flex justify-content-between align-items-center">
+              <div class="trainer-profile d-flex align-items-center">
+               
+                <span>{{item.name}}</span>
+              </div>
+            
+              <div>
+               <a class="btn btn-primary" (click)="detail(item.id)">Details</a>
+               
+               <button class="btn btn-danger"  *ngIf="etat" (click)="delete(item.id)">Delete</button>
+               <button class="btn btn-info" *ngIf="etat" (click)="update(item)">Update</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div> <!-- End Course Item-->
+
+
+    </div>
+
+  </div>
+</section><!-- End Courses Section -->
+
+</main><!-- End #main -->
+
+
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="addproduct(f)">
+          <div class="row">
+            <div>
+              <input type="text" class="form-control" placeholder="Title" name="title" #title="ngModel" ngModel>
+            </div>
+            <div>
+              <input type="text" class="form-control" placeholder="Nom Formateur"  name="nom" #nom="ngModel" ngModel>
+            </div>
+            <div>
+              <input type="email" class="form-control" placeholder="Email"  name="email" #email="ngModel" ngModel>
+            </div>
+            <div>
+              <input type="number" class="form-control" placeholder="Prix"  name="prix" #prix="ngModel" ngModel>
+            </div>
+            <br>
+            <div>
+              <textarea class="form-control" cols="30" rows="10" placeholder="Description" name="description" #description="ngModel" ngModel></textarea>
+            </div>
+            <br>
+            <div>
+              <input type="text" class="form-control"  placeholder="Image" name="image" #image="ngModel" ngModel>
+            </div>
+            
+          </div>
+          <div class="alert alert-success" *ngIf="successMessage">{{successMessage}}</div>
+          <br>
+          <button class="btn btn-success">Add Product</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+

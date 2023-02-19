@@ -1,0 +1,439 @@
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #3e5569; }
+    .table th,
+    .table td {
+      padding: 1rem;
+      vertical-align: top;
+      border-top: 1px solid #e9ecef; }
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #e9ecef; }
+    .table tbody + tbody {
+      border-top: 2px solid #e9ecef; }
+  
+  .table-sm th,
+  .table-sm td {
+    padding: 0.3rem; }
+  
+  .table-bordered {
+    border: 1px solid #e9ecef; }
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #e9ecef; }
+    .table-bordered thead th,
+    .table-bordered thead td {
+      border-bottom-width: 2px; }
+  
+  .table-borderless th,
+  .table-borderless td,
+  .table-borderless thead th,
+  .table-borderless tbody + tbody {
+    border: 0; }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); }
+  
+  .table-hover tbody tr:hover {
+    color: #3e5569;
+    background-color: #f8f9fa; }
+  
+  .table-primary,
+  .table-primary > th,
+  .table-primary > td {
+    background-color: #e3dffc; }
+  
+  .table-primary th,
+  .table-primary td,
+  .table-primary thead th,
+  .table-primary tbody + tbody {
+    border-color: #b7acf6; }
+  
+  .table-hover .table-primary:hover {
+    background-color: #cfc8fa; }
+    .table-hover .table-primary:hover > td,
+    .table-hover .table-primary:hover > th {
+      background-color: #cfc8fa; }
+  
+  .table-secondary,
+  .table-secondary > th,
+  .table-secondary > td {
+    background-color: #e2e3e5; }
+  
+  .table-secondary th,
+  .table-secondary td,
+  .table-secondary thead th,
+  .table-secondary tbody + tbody {
+    border-color: #b3b7bb; }
+  
+  .table-hover .table-secondary:hover {
+    background-color: #d5d6d9; }
+    .table-hover .table-secondary:hover > td,
+    .table-hover .table-secondary:hover > th {
+      background-color: #d5d6d9; }
+  
+  .table-success,
+  .table-success > th,
+  .table-success > td {
+    background-color: #d7f2ed; }
+  
+  .table-success th,
+  .table-success td,
+  .table-success thead th,
+  .table-success tbody + tbody {
+    border-color: #96ddd1; }
+  
+  .table-hover .table-success:hover {
+    background-color: #c4ece4; }
+    .table-hover .table-success:hover > td,
+    .table-hover .table-success:hover > th {
+      background-color: #c4ece4; }
+  
+  .table-info,
+  .table-info > th,
+  .table-info > td {
+    background-color: #d4e0ff; }
+  
+  .table-info th,
+  .table-info td,
+  .table-info thead th,
+  .table-info tbody + tbody {
+    border-color: #90adff; }
+  
+  .table-hover .table-info:hover {
+    background-color: #bbceff; }
+    .table-hover .table-info:hover > td,
+    .table-hover .table-info:hover > th {
+      background-color: #bbceff; }
+  
+  .table-warning,
+  .table-warning > th,
+  .table-warning > td {
+    background-color: #fff2d6; }
+  
+  .table-warning th,
+  .table-warning td,
+  .table-warning thead th,
+  .table-warning tbody + tbody {
+    border-color: #ffdc95; }
+  
+  .table-hover .table-warning:hover {
+    background-color: #ffeabd; }
+    .table-hover .table-warning:hover > td,
+    .table-hover .table-warning:hover > th {
+      background-color: #ffeabd; }
+  
+  .table-danger,
+  .table-danger > th,
+  .table-danger > td {
+    background-color: #fdd5dc; }
+  
+  .table-danger th,
+  .table-danger td,
+  .table-danger thead th,
+  .table-danger tbody + tbody {
+    border-color: #fa92a5; }
+  
+  .table-hover .table-danger:hover {
+    background-color: #fcbdc8; }
+    .table-hover .table-danger:hover > td,
+    .table-hover .table-danger:hover > th {
+      background-color: #fcbdc8; }
+  
+  .table-light,
+  .table-light > th,
+  .table-light > td {
+    background-color: #fefefe; }
+  
+  .table-light th,
+  .table-light td,
+  .table-light thead th,
+  .table-light tbody + tbody {
+    border-color: #fbfcfc; }
+  
+  .table-hover .table-light:hover {
+    background-color: #f1f1f1; }
+    .table-hover .table-light:hover > td,
+    .table-hover .table-light:hover > th {
+      background-color: #f1f1f1; }
+  
+  .table-dark,
+  .table-dark > th,
+  .table-dark > td {
+    background-color: #d6d8d9; }
+  
+  .table-dark th,
+  .table-dark td,
+  .table-dark thead th,
+  .table-dark tbody + tbody {
+    border-color: #95999c; }
+  
+  .table-hover .table-dark:hover {
+    background-color: #c9cbcd; }
+    .table-hover .table-dark:hover > td,
+    .table-hover .table-dark:hover > th {
+      background-color: #c9cbcd; }
+  
+  .table-cyan,
+  .table-cyan > th,
+  .table-cyan > td {
+    background-color: #dcf3fd; }
+  
+  .table-cyan th,
+  .table-cyan td,
+  .table-cyan thead th,
+  .table-cyan tbody + tbody {
+    border-color: #a3e0fb; }
+  
+  .table-hover .table-cyan:hover {
+    background-color: #c4ebfc; }
+    .table-hover .table-cyan:hover > td,
+    .table-hover .table-cyan:hover > th {
+      background-color: #c4ebfc; }
+  
+  .table-orange,
+  .table-orange > th,
+  .table-orange > td {
+    background-color: #fee8cc; }
+  
+  .table-orange th,
+  .table-orange td,
+  .table-orange thead th,
+  .table-orange tbody + tbody {
+    border-color: #fdc37a; }
+  
+  .table-hover .table-orange:hover {
+    background-color: #feddb3; }
+    .table-hover .table-orange:hover > td,
+    .table-hover .table-orange:hover > th {
+      background-color: #feddb3; }
+  
+  .table-purple,
+  .table-purple > th,
+  .table-purple > td {
+    background-color: #e3dffc; }
+  
+  .table-purple th,
+  .table-purple td,
+  .table-purple thead th,
+  .table-purple tbody + tbody {
+    border-color: #b7acf6; }
+  
+  .table-hover .table-purple:hover {
+    background-color: #cfc8fa; }
+    .table-hover .table-purple:hover > td,
+    .table-hover .table-purple:hover > th {
+      background-color: #cfc8fa; }
+  
+  .table-active,
+  .table-active > th,
+  .table-active > td {
+    background-color: #f8f9fa; }
+  
+  .table-hover .table-active:hover {
+    background-color: #e9ecef; }
+    .table-hover .table-active:hover > td,
+    .table-hover .table-active:hover > th {
+      background-color: #e9ecef; }
+  
+  .table .thead-dark th {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #454d55; }
+  
+  .table .thead-light th {
+    color: #4F5467;
+    background-color: #e9ecef;
+    border-color: #e9ecef; }
+  
+  .table-dark {
+    color: #fff;
+    background-color: #343a40; }
+    .table-dark th,
+    .table-dark td,
+    .table-dark thead th {
+      border-color: #454d55; }
+    .table-dark.table-bordered {
+      border: 0; }
+    .table-dark.table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(255, 255, 255, 0.05); }
+    .table-dark.table-hover tbody tr:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.075); }
+  
+  @media (max-width: 575.98px) {
+    .table-responsive-sm {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+      .table-responsive-sm > .table-bordered {
+        border: 0; } }
+  
+  @media (max-width: 767.98px) {
+    .table-responsive-md {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+      .table-responsive-md > .table-bordered {
+        border: 0; } }
+  
+  @media (max-width: 991.98px) {
+    .table-responsive-lg {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+      .table-responsive-lg > .table-bordered {
+        border: 0; } }
+  
+  @media (max-width: 1599.98px) {
+    .table-responsive-xl {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+      .table-responsive-xl > .table-bordered {
+        border: 0; } }
+  
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; }
+    .table-responsive > .table-bordered {
+      border: 0; }
+      #breadcrumbs {
+        background:  #6d7fcc;;
+        color: #ffffff;
+        font-size: 15px;
+        overflow: hidden;
+        padding: 12px 0;
+        font-family: 'Lato', sans-serif;
+    }
+    
+    #breadcrumbs li {
+        float: left;
+    }
+    
+    #breadcrumbs a {
+        color: #ffffff;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+    }
+    
+    #breadcrumbs td + td:before {
+        content: "";
+        margin: 13px 13px 0 15px;
+        float: left;
+        background: url(/assets/ico_arrow.png) no-repeat;
+        width: 9px;
+        height: 5px;
+    }
+    #body
+    {
+        text-align: center;
+        right: 100px;
+    }
+    .container {
+        position: relative;
+        width: 1170px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .c1 {
+        position: relative;
+        width: 1000px;
+        margin: 100px 300px;
+        text-align: center;
+    }
+    button {
+        margin: 20px;
+        outline: none;
+      }
+      .custom-btn {
+        width: 130px;
+        height: 40px;
+        padding: 10px 25px;
+        border: 2px solid #000;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+      }
+      .btn-6 {
+        background: #6d7fcc;
+       color: #fff;
+       line-height: 42px;
+       padding: 0;
+       border: none;
+      }
+      .btn-6 span {
+       position: relative;
+       display: block;
+       width: 100%;
+       height: 100%;
+      }
+      .btn-6:before,
+      .btn-6:after {
+       position: absolute;
+       content: "";
+       height: 0%;
+       width: 2px;
+       background: #000;
+      }
+      .btn-6:before {
+       right: 0;
+       top: 0;
+       transition: all 500ms ease;
+      }
+      .btn-6:after {
+       left: 0;
+       bottom: 0;
+       transition: all 500ms ease;
+      }
+      .btn-6:hover{
+       color: #000;
+       background: transparent;
+      }
+      .btn-6:hover:before {
+       transition: all 500ms ease;
+       height: 100%;
+      }
+      .btn-6:hover:after {
+       transition: all 500ms ease;
+       height: 100%;
+      }
+      .btn-6 span:before,
+      .btn-6 span:after {
+       position: absolute;
+       content: "";
+       background: #000;
+      }
+      .btn-6 span:before {
+       left: 0;
+       top: 0;
+       width: 0%;
+       height: 2px;
+       transition: all 500ms ease;
+      }
+      .btn-6 span:after {
+       right: 0;
+       bottom: 0;
+       width: 0%;
+       height: 2px;
+       transition: all 500ms ease;
+      }
+      .btn-6 span:hover:before {
+       width: 100%;
+      }
+      .btn-6 span:hover:after {
+       width: 100%;
+      }
+     
+    

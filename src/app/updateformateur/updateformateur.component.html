@@ -1,0 +1,71 @@
+
+<!--<!DOCTYPE html>
+ <html>
+    <head>
+        <title>Cours Complet Bootstrap 4</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     </head>
+     <body>
+         <div class="container">
+             <h1>Formulaires</h1>
+             <form  #f="ngForm"  >
+               <fieldset>
+                 <legend>Exemple de formulaire Bootstrap</legend>
+                 <h3>helllo</h3>
+                 <input type="email"  placeholder="name" name="email" [(ngModel)]="product.email"  required/>
+
+                 <input type="text"  placeholder="title" id="title" name="title" [(ngModel)]="product.title"  required/>
+
+                 <input type="text"  placeholder="prix" id="prix" name="prix" [(ngModel)]="product.prix"  required/>
+                 <button class="btn btn-success" (click)="update()">Update</button>
+
+            <h3>BYYYYY</h3>-->
+            <div class="contact1">
+                <div class="container-contact1">
+                    <div class="contact1-pic js-tilt" data-tilt>
+                        <img [src]="data.image"  alt="IMG">
+                    </div>
+        
+                    <form class="contact1-form validate-form">
+                        <span class="contact1-form-title">
+                            Get in touch
+                        </span>
+                        <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                            <span class="shadow-input1">title</span>
+                            <br>
+                            <input class="input1" type="text"  placeholder="title" id="title" name="title" [(ngModel)]="data.lastname"  required>
+                            
+                        </div>
+                        <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+                            <span class="shadow-input1">Name of Formateur</span>
+                            <br>
+                            <input class="input1" type="text"  placeholder="name of the formateur" id="nom " name="nom" [(ngModel)]="data.firstname"  required>
+                            
+                        </div>
+                        <div class="wrap-input1 validate-input" data-validate = "Name is required">
+                            <span class="shadow-input1">Email</span>
+                            <br>
+                            <input class="input1"  type="email"  placeholder="email" name="email" [(ngModel)]="data.email"  required>
+                            
+                        </div>
+        
+                        <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+                            <span class="shadow-input1">Link Image </span>
+                            <br>
+                            <input class="input1" type="text"  placeholder="link image" id="image" name="image" [(ngModel)]="data.image"  required>
+                            
+                        </div>
+        
+                       
+        
+                        <div class="container-contact1-form-btn">
+                            <button class="contact1-form-btn" (click)="update()">
+                                <span>
+                                    Update
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>

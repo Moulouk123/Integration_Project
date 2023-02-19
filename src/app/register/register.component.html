@@ -1,0 +1,82 @@
+
+<br><br><br>
+
+<div class="main">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-img">
+                <img src="assets/img/signup-img.jpg" alt="">
+            </div>
+            <div class="signup-form">
+                <form  class="register-form" id="register-form" #f="ngForm" (ngSubmit)="register(f)">
+                    <h2>student registration form</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name"> Last Name :</label>
+                            <input type="text" name="lname" id="lname" #lname="ngModel" ngModel required/>
+                            <p class="alert alert-danger" *ngIf="lname.errors && lname.touched">this input  lastName is required</p>                
+                                
+                        </div>
+                        <div class="form-group">
+                            <label for="father_name">First Name :</label>
+                            <input type="text" name="fname" id="father_name" #fname="ngModel" ngModel required/>
+                            <p class="alert alert-danger" *ngIf="fname.errors && fname.touched">this input firstName is required</p>                
+
+                        </div>
+                        
+                    </div>
+                    
+                    
+                  
+                        
+                    
+                    <div class="form-group">
+                        <label for="pincode">Password :</label>
+                        <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+
+                        <input type="password" name="password"  minlength="9" id="pincode" required #password="ngModel" ngModel>
+                        <p class="alert alert-danger" *ngIf="password.errors && password.touched">this input password is required</p>
+                           
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode"> Confirm Password :</label>
+                        <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+
+                        <input type="password" name="confirmPassword"  minlength="9" id="confirmPassword" required #confirmPassword="ngModel" ngModel>
+                        <p class="alert alert-danger" *ngIf="confirmPassword.errors  && confirmPassword.touched">this input confirm password is required</p>
+                        <p class="alert alert-danger" *ngIf="password.value!==confirmPassword.value && password.touched">not equal</p>
+                    
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="email">Email Adress:</label>
+                        <input type="email" required #email="ngModel" ngModel name="email" id="email" />
+                        <p class="alert alert-danger" *ngIf="email.errors && email.touched">this input should be email</p>
+
+                    </div>  
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Select One Choise</label>
+                        <select class="form-control" name="prof" #prof ="ngModel" ngModel id="prof">
+                          <option>Etudiant</option>
+                          <option>Formateur</option>
+                         
+                        </select>
+                      </div>
+                    <div class="form-submit">
+                        <input value="Reset All"   routerLink="/login" class="submit" name="reset" id="reset" />
+                        <input type="submit" value="Submit Form"   class="submit" name="submit" id="submit" />
+                    </div>
+                </form>
+                
+            </div>
+            <div class="redirectToLogin">
+                <span>
+                    Already have an account?
+                  <span class="redirect" routerLink="/login">Log In</span></span>  
+              </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->

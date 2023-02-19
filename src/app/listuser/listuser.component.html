@@ -1,0 +1,117 @@
+<br><br><br>
+<div id="breadcrumbs">
+    <div class="container">
+      <table>
+        <tr>
+          <td><a routerLink="/dashbord-admin">Admin panel</a></td>
+          <td>List Formateurs</td>
+        </tr>
+      
+      </table>
+    </div>
+    <!-- / container -->
+    
+  </div>
+
+
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box">
+                <div class="table-responsive">
+                    <table class="table text-nowrap">
+                        <thead>
+                            <tr>
+                                <th class="border-top-0">image</th>
+
+                                <th class="border-top-0">id</th>
+                                <th class="border-top-0">First Name</th>
+                                <th class="border-top-0">Last name</th>
+                                <th class="border-top-0">Email</th>
+                              
+
+
+                                <th class="border-top-0"> Delete Formateur</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let user of dataArray">
+                            <tr >
+                                <td ><img [src]="user.link" width="150px"height="150px"></td>
+
+                                <td>{{user.id}}</td>
+                                <td>{{user.flName}}</td>
+                                <td>{{user.lname}}</td>
+                                <td>{{user.email}}</td>
+
+                             <td><button class="custom-btn btn-6" (click)="deletef(user.id)"><span>Delete</span></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+
+<div id="breadcrumbs">
+    <div class="container">
+      <table>
+        <tr>
+          <td><a routerLink="/dashbord-admin">Admin panel</a></td>
+          <td>List Etudiants</td>
+        </tr>
+      
+      </table>
+    </div>
+    <!-- / container -->
+    
+  </div>
+
+
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box">
+                <div class="table-responsive">
+                    <table class="table text-nowrap">
+                        <thead>
+                            <tr>
+                                <th class="border-top-0">Image</th>
+
+                                <th class="border-top-0">Id</th>
+                                <th class="border-top-0">First Name</th>
+                                <th class="border-top-0">Last name</th>
+                                <th class="border-top-0">Email</th>
+
+                                <th class="border-top-0"> Delete Etudiant</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let user of dataArrayE">
+                            <tr >
+                                <td ><img [src]="user.link" width="150px"height="150px"></td>
+
+                                <td>{{user.id}}</td>
+                                <td>{{user.flName}}</td>
+                                <td>{{user.lname}}</td>
+                                <td>{{user.email}}</td>
+
+                               
+
+                             <td><button class="custom-btn btn-6" (click)="deleteE(user.id)"><span>Delete</span></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
